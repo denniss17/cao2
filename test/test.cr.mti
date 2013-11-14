@@ -1,0 +1,63 @@
+C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/quartus-dennis/simulation/modelsim/count_fast.vho {1 {vcom -work work -2002 -explicit C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/quartus-dennis/simulation/modelsim/count_fast.vho
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package vital_timing
+-- Loading package vital_primitives
+-- Loading package cycloneii_atom_pack
+-- Loading package cycloneii_components
+-- Loading package std_logic_arith
+-- Compiling entity count
+-- Compiling architecture structure of count
+
+} {} {}} C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/tutorial/count_recursive_funct2.vhd {1 {vcom -work work -2002 -explicit C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/tutorial/count_recursive_funct2.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity count
+-- Compiling architecture recursive of count
+
+} {} {}} C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/tutorial/count.vhd {1 {vcom -work work -2002 -explicit C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/tutorial/testset.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity testset
+-- Compiling architecture set1 of testset
+
+} {} {}} C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/quartus-dennis/simulation/modelsim/count.vho {1 {vcom -work work -2002 -explicit C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/quartus-dennis/simulation/modelsim/count.vho
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package vital_timing
+-- Loading package vital_primitives
+-- Loading package cycloneii_atom_pack
+-- Loading package cycloneii_components
+-- Loading package std_logic_arith
+-- Compiling entity count
+-- Compiling architecture structure of count
+
+} {} {}} C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/tutorial/testset.vhd {1 {vcom -work work -2002 -explicit C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/tutorial/testset.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity testset
+-- Compiling architecture set1 of testset
+
+} {} {}} C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/tutorial/testbench.vhd {1 {vcom -work work -2002 -explicit C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/tutorial/testbench.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity testbench
+-- Compiling architecture structure of testbench
+
+} {} {}} C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/tutorial/count_loop_PSL.vhd {1 {vcom -work work -2002 -explicit C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/tutorial/count_loop_PSL.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity funny
+-- Compiling architecture behaviour of funny
+
+} {} {}}
