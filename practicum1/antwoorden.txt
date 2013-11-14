@@ -1,0 +1,4 @@
+1
+a
+Als de knop niet is ingedrukt is de spanning op de pin 3,3 volt. Als de knop is ingedrukt staat er een spanning van 0 volt op de pin.
+De pinnen voor de 7 segments display moeten via de bank met de ground verbonden worden om de LEDs aan te kijgen.
