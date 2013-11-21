@@ -1,0 +1,76 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\Dennis\Desktop
+Edisplay
+Z0 w1384424014
+Z1 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z2 dC:\Users\Dennis\Documents\_Ontwikkeling\github\cao2\practicum1\dennis
+Z3 8C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/practicum1/display.vhd
+Z4 FC:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/practicum1/display.vhd
+l0
+L6
+VgKTjfYOP4YcDR:i3@_75U0
+Z5 OV;C;6.6d;45
+32
+Z6 o-work work -2002 -explicit -O0
+Z7 tExplicit 1
+!s100 fcHBz:0?79<A0m1R0:N?41
+Abhv
+R1
+Z8 DEx4 work 7 display 0 22 gKTjfYOP4YcDR:i3@_75U0
+l36
+L14
+VjP>NgW_M>^SdM3hDhIg2?2
+R5
+32
+Z9 Mx1 4 ieee 14 std_logic_1164
+R6
+R7
+!s100 2BGC=11knD3>D8;Oc<OKK0
+Edisplay_test
+Z10 w1384424014
+Z11 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+R1
+R2
+Z12 8C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/practicum1/display_test.vhd
+Z13 FC:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/practicum1/display_test.vhd
+l0
+L4
+VWzFca:X7HoDMSf^LKPYVR2
+R5
+32
+R6
+R7
+!s100 TjCYaTNmkalVhN@HPF4UN2
+Aexhaustive
+R8
+R11
+R1
+DEx4 work 12 display_test 0 22 WzFca:X7HoDMSf^LKPYVR2
+l11
+L7
+VaXL?TlCX<Bg:QnV0agLBI1
+R5
+32
+Z14 Mx2 4 ieee 14 std_logic_1164
+Mx1 4 ieee 11 numeric_std
+R6
+R7
+!s100 TO[CYo8;e57WC87Mh:Lfz1
+Epush_counter
+R10
+R11
+R1
+R2
+8C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/practicum1/push_counter_entity.vhd
+FC:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/practicum1/push_counter_entity.vhd
+l0
+L4
+V?^XeeTofhf7hgFf]9gH=L2
+!s100 kX?G^4CAj=;aT[DMgKccc2
+R5
+32
+R6
+R7
