@@ -27,5 +27,12 @@ hex[3] => Mux3.IN16
 hex[3] => Mux4.IN16
 hex[3] => Mux5.IN16
 hex[3] => Mux6.IN16
+dig[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+dig[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+dig[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+dig[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+dig[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+dig[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+dig[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
