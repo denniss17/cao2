@@ -7,13 +7,20 @@ END display_test;
 ARCHITECTURE exhaustive OF display_test IS
   SIGNAL hex : unsigned(3 DOWNTO 0);
   SIGNAL displ,displ2 : std_logic_vector(6 DOWNTO 0);
+  SIGNAL ok : std_logic;
 
 BEGIN   
   PROCESS
   BEGIN
+    ok <= '1';
     FOR i IN 0 TO 15 LOOP
       hex <= to_unsigned(i,4);
       WAIT FOR 20 ns;
+      IF (displ=displ2 AND ok='1') THEN 
+        ok <= '1'; 
+      ELSE 
+        ok <= '0'; 
+      END IF;
       -- user has to verify the result. (or a check with golden unit here)
     END LOOP;
     WAIT;

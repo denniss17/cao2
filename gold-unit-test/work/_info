@@ -12,20 +12,20 @@ Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z6 DPx9 cycloneii 20 cycloneii_components 0 22 h@gSJ;Al32oYg[7^PbnAR0
 Z7 dC:\Users\Dennis\Documents\_Ontwikkeling\github\cao2\gold-unit-test
-Z8 8C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/practicum1/dennis/simulation/modelsim/display.vho
-Z9 FC:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/practicum1/dennis/simulation/modelsim/display.vho
+Z8 8C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/display.vho
+Z9 FC:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/display.vho
 l0
 L34
 VXY0B4CfNLaO8U9FzOn8<c1
-!s100 1GlNFg^U`Tm36D=WXhRC33
 Z10 OV;C;10.1d;51
 32
-!i10b 1
-Z11 !s108 1385051371.729000
-Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/practicum1/dennis/simulation/modelsim/display.vho|
-Z13 !s107 C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/practicum1/dennis/simulation/modelsim/display.vho|
+Z11 !s108 1385652144.960000
+Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/display.vho|
+Z13 !s107 C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/display.vho|
 Z14 o-work work -2002 -explicit -O0
 Z15 tExplicit 1
+!s100 1GlNFg^U`Tm36D=WXhRC33
+!i10b 1
 Astructure
 R1
 R2
@@ -36,67 +36,73 @@ R6
 Z16 DEx4 work 7 display 0 22 XY0B4CfNLaO8U9FzOn8<c1
 l79
 L55
-Z17 VUVINHlj`O<ljY?mzFm2bh0
-Z18 !s100 6R1mQ5LWbShcclN9@GEYk1
+VUVINHlj`O<ljY?mzFm2bh0
 R10
 32
-!i10b 1
 R11
 R12
 R13
 R14
 R15
+!s100 6R1mQ5LWbShcclN9@GEYk1
+!i10b 1
 Edisplay_gold
-Z19 w1385050423
+Z17 w1385652072
+Z18 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z19 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z20 DPx4 work 9 utilities 0 22 CWL4SBK0R^4z7C>Tmjn@L3
 R4
 R5
 R7
-Z20 8C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/display_gold.vhd
-Z21 FC:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/display_gold.vhd
+Z21 8C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/display_gold.vhd
+Z22 FC:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/display_gold.vhd
 l0
-L6
-V5EJzIBn@oOCR7c2L;EVV:2
+L7
+VB2hB8=dL>iga1Ej8kEFa?0
 R10
 32
-Z22 !s108 1385051266.636000
-Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/display_gold.vhd|
-Z24 !s107 C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/display_gold.vhd|
+Z23 !s108 1385652145.351000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/display_gold.vhd|
+Z25 !s107 C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/display_gold.vhd|
 R14
 R15
-!s100 QB81HALlIE]PmKZLQj3II3
+!s100 SfaWHbHWP0S>8bg;B3U:o3
 !i10b 1
 Abhv
+R18
+R19
+R20
 R4
 R5
-Z25 DEx4 work 12 display_gold 0 22 5EJzIBn@oOCR7c2L;EVV:2
-l36
-L14
-VSEN_O:h86ZSRW=06W;?Y=2
+Z26 DEx4 work 12 display_gold 0 22 B2hB8=dL>iga1Ej8kEFa?0
+l21
+L20
+Vc8GFUkFa28bRCEUzHYR^22
 R10
 32
-R22
 R23
 R24
+R25
 R14
 R15
-!s100 3V2`5oiWC^ef:ml5T<o2_2
+!s100 ]^>D3g]c=E=l`hIWi4N<:0
 !i10b 1
 Edisplay_test
-Z26 w1385050573
-Z27 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z27 w1385652053
+Z28 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 R4
 R5
 R7
-Z28 8C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/display_test.vhd
-Z29 FC:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/display_test.vhd
+Z29 8C:\Users\Dennis\Documents\_Ontwikkeling\github\cao2\gold-unit-test\display_test.vhd
+Z30 FC:\Users\Dennis\Documents\_Ontwikkeling\github\cao2\gold-unit-test\display_test.vhd
 l0
 L4
 V`2]Udl1a^hD0IbU3JHl?m2
 R10
 32
-Z30 !s108 1385051267.011000
-Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/display_test.vhd|
-Z32 !s107 C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/display_test.vhd|
+Z31 !s108 1385652145.820000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\Dennis\Documents\_Ontwikkeling\github\cao2\gold-unit-test\display_test.vhd|
+Z33 !s107 C:\Users\Dennis\Documents\_Ontwikkeling\github\cao2\gold-unit-test\display_test.vhd|
 R14
 R15
 !s100 mKe4hHUmT46Wh3B`2SfE71
@@ -107,20 +113,64 @@ R2
 R3
 R6
 R16
-R25
-R27
+R18
+R19
+R20
+R26
+R28
 R4
 R5
 DEx4 work 12 display_test 0 22 `2]Udl1a^hD0IbU3JHl?m2
-l11
+l12
 L7
-VmWO:4gl[79d7hZ=79m]:13
-!s100 VbKfhaFm4K=GRfB5IO=_H1
+VimWg16kH=CFbOR7l][Ce42
+!s100 A2^@EHbD4IESnj?z^c<MN1
 R10
 32
-R30
 R31
 R32
+R33
 R14
 R15
 !i10b 1
+Putilities
+R18
+R19
+R4
+R5
+Z34 w1385652112
+R7
+Z35 8C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/utilities.vhd
+Z36 FC:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/utilities.vhd
+l0
+L5
+VCWL4SBK0R^4z7C>Tmjn@L3
+!s100 @^m50Nc0@7R=G1moGCL7n1
+R10
+32
+b1
+!i10b 1
+Z37 !s108 1385652146.210000
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/utilities.vhd|
+Z39 !s107 C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/gold-unit-test/utilities.vhd|
+R14
+R15
+Bbody
+R20
+R18
+R19
+R4
+R5
+l0
+L11
+Z40 V_GiLF7ZAT=IlXHZK?f5J63
+Z41 !s100 _CzTHWYBPLKSJ2HgUHh0k3
+R10
+32
+!i10b 1
+R37
+R38
+R39
+R14
+R15
+nbody
