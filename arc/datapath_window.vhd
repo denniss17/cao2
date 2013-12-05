@@ -29,6 +29,7 @@ ENTITY datapath IS
   GENERIC (window_depth : integer := 3);
   PORT (
     Clk     : IN std_logic;
+    Reset   : IN  std_logic; -- async, low active
     DataIn  : IN std_logic_vector(31 DOWNTO 0);
     Dout    : OUT std_logic_vector(31 DOWNTO 0);
     Address : OUT std_logic_vector(31 DOWNTO 0); 
@@ -56,6 +57,7 @@ ARCHITECTURE structure OF datapath IS
   COMPONENT registerfile IS
     PORT (
       Clk : IN std_logic;
+      Reset   : IN  std_logic; -- async, low active
 
       BusA : OUT std_logic_vector(31 DOWNTO 0);
       SelA : IN  std_logic_vector( 5 DOWNTO 0);  
@@ -63,7 +65,7 @@ ARCHITECTURE structure OF datapath IS
       SelB : IN  std_logic_vector( 5 DOWNTO 0);  
       BusC : IN  std_logic_vector(31 DOWNTO 0);
       SelC : IN  std_logic_vector( 5 DOWNTO 0);
-      CWP  : IN std_logic_vector(window_depth-1 DOWNTO 0);
+      -- CWP  : IN std_logic_vector(window_depth-1 DOWNTO 0);
     
       window_ov : OUT std_logic;
       window_un : OUT std_logic;
@@ -88,7 +90,7 @@ ARCHITECTURE structure OF datapath IS
 BEGIN
 
   reg_file: registerfile
-    PORT MAP(Clk,BusA,SelA,BusB,SelB,BusC,SelC,CWP,window_ov,window_un,IR);
+    PORT MAP(Clk,Reset,BusA,SelA,BusB,SelB,BusC,SelC,window_ov,window_un,IR);
 
   SelA <= ('0'&rs1) WHEN AMux='1' ELSE A;
   SelB <= ('0'&rs2) WHEN BMux='1' ELSE B;  

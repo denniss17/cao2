@@ -28,14 +28,15 @@ ENTITY registerfile IS
   GENERIC (window_depth : integer := 3);
   PORT (
     Clk : IN std_logic;
-
+    Reset : IN  std_logic; -- async, low active
+    
     BusA : OUT std_logic_vector(31 DOWNTO 0);
     SelA : IN  std_logic_vector( 5 DOWNTO 0);  
     BusB : OUT std_logic_vector(31 DOWNTO 0);
     SelB : IN  std_logic_vector( 5 DOWNTO 0);  
     BusC : IN  std_logic_vector(31 DOWNTO 0);
     SelC : IN  std_logic_vector( 5 DOWNTO 0);
-    CWP  : IN std_logic_vector(window_depth-1 DOWNTO 0);
+    --CWP  : IN std_logic_vector(window_depth-1 DOWNTO 0);
     
     window_ov : OUT std_logic;
     window_un : OUT std_logic;
@@ -47,6 +48,7 @@ ARCHITECTURE three_port OF registerfile IS
 
   TYPE reg_file_type IS ARRAY (15 + 24*(2**window_depth) DOWNTO 0) OF std_logic_vector(31 DOWNTO 0);
   SIGNAL reg_file : reg_file_type := (OTHERS=>(OTHERS=>'0'));
+  SIGNAL CWP : std_logic_vector(window_depth-1 DOWNTO 0);
   ATTRIBUTE ram_block: boolean;
   ATTRIBUTE ram_block OF reg_file: SIGNAL IS true;  
  
@@ -56,7 +58,11 @@ BEGIN
   registers:PROCESS(clk)
     VARIABLE index : natural;
   BEGIN
-    IF falling_edge(clk) THEN  
+    IF Reset='0' THEN
+      CWP <= (OTHERS=>'0');
+      window_ov <= '0';
+      window_un <= '0';
+    ELSIF falling_edge(clk) THEN  
       reg_file(0) <= (OTHERS=>'0');  --%r0 constant zero
       index := decoder(SelC);
       IF index>0 THEN

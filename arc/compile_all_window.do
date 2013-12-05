@@ -4,7 +4,7 @@ vcom datapath_window.vhd
 vcom microstore.vhd
 vcom microstore_bhv.vhd
 vcom control_window.vhd
-vcom ARCprocessor.vhd
+vcom ARCprocessor_window.vhd
 # ARC processor is compiler
 vcom conversion_utilities.vhd
 vcom main_memory.vhd

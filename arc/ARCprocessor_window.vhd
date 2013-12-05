@@ -68,7 +68,7 @@ ARCHITECTURE structure OF ARC IS
   COMPONENT datapath IS
     PORT (
       Clk     : IN std_logic;
-      Reset : IN  std_logic; -- async, low active
+      Reset   : IN  std_logic; -- async, low active
       DataIn  : IN std_logic_vector(31 DOWNTO 0);
       Dout    : OUT std_logic_vector(31 DOWNTO 0);
       Address : OUT std_logic_vector(31 DOWNTO 0); 
