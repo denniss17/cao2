@@ -1,6 +1,6 @@
 vcom utilities.vhd
 vcom registerfile_window.vhd
-vcom datapath.vhd
+vcom datapath_window.vhd
 vcom microstore.vhd
 vcom microstore_bhv.vhd
 vcom control_window.vhd

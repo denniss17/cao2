@@ -25,6 +25,7 @@ USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
 USE work.utilities.ALL;
 ENTITY registerfile IS
+  GENERIC (window_depth : integer := 3);
   PORT (
     Clk : IN std_logic;
 
@@ -34,13 +35,17 @@ ENTITY registerfile IS
     SelB : IN  std_logic_vector( 5 DOWNTO 0);  
     BusC : IN  std_logic_vector(31 DOWNTO 0);
     SelC : IN  std_logic_vector( 5 DOWNTO 0);
-  IR   : OUT std_logic_vector(31 DOWNTO 0)
+    CWP  : IN std_logic_vector(window_depth-1 DOWNTO 0);
+    
+    window_ov : OUT std_logic;
+    window_un : OUT std_logic;
+    IR   : OUT std_logic_vector(31 DOWNTO 0)
   );
 END ENTITY registerfile;
 
 ARCHITECTURE three_port OF registerfile IS
 
-  TYPE reg_file_type IS ARRAY (37 DOWNTO 0) OF std_logic_vector(31 DOWNTO 0);
+  TYPE reg_file_type IS ARRAY (15 + 24*(2**window_depth) DOWNTO 0) OF std_logic_vector(31 DOWNTO 0);
   SIGNAL reg_file : reg_file_type := (OTHERS=>(OTHERS=>'0'));
   ATTRIBUTE ram_block: boolean;
   ATTRIBUTE ram_block OF reg_file: SIGNAL IS true;  
@@ -52,17 +57,44 @@ BEGIN
     VARIABLE index : natural;
   BEGIN
     IF falling_edge(clk) THEN  
-    reg_file(0) <= (OTHERS=>'0');  --%r0 constant zero
+      reg_file(0) <= (OTHERS=>'0');  --%r0 constant zero
       index := decoder(SelC);
       IF index>0 THEN
-        reg_file(index)<= BusC;
+        IF index > 31 THEN
+          -- 32 till 37 is mapped to 8 till 15
+          reg_file(index-24)<= BusC;
+        ELSIF index > 7 THEN
+          reg_file(index + 8 + 24*to_integer(unsigned(CWP)))<= BusC;
+        ELSE
+          -- r0 t/m r7
+          reg_file(index)<= BusC;
+        END IF;
       END IF;
     END IF;
   END PROCESS registers;
-
-  BusA <= reg_file(to_integer(unsigned(SelA)));
-  BusB <= reg_file(to_integer(unsigned(SelB)));  
+  
+  lol:PROCESS(selA, selB)
+  BEGIN
+      IF to_integer(unsigned(SelA)) > 31 THEN
+        BusA <= reg_file(to_integer(unsigned(SelA))-24);
+      ELSIF to_integer(unsigned(SelA)) > 7 THEN
+        BusA <= reg_file(to_integer(unsigned(SelA))+8+24*to_integer(unsigned(CWP)));
+      ELSE
+        BusA <= reg_file(to_integer(unsigned(SelA)));
+      END IF;
+      
+      IF to_integer(unsigned(SelB)) > 31 THEN
+        BusB <= reg_file(to_integer(unsigned(SelB))-24);
+      ELSIF to_integer(unsigned(SelB)) > 7 THEN
+        BusB <= reg_file(to_integer(unsigned(SelB))+8+24*to_integer(unsigned(CWP)));
+      ELSE
+        BusB <= reg_file(to_integer(unsigned(SelB)));
+      END IF;
+  END PROCESS lol;
+  
+  -- BusA <= reg_file(to_integer(unsigned(SelA)));
+  -- BusB <= reg_file(to_integer(unsigned(SelB)));  
  
-  IR  <= reg_file(37);
+  IR  <= reg_file(37-24);
     
 END ARCHITECTURE three_port;
