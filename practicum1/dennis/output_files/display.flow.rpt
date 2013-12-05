@@ -1,5 +1,5 @@
 Flow report for display
-Thu Nov 21 17:11:12 2013
+Thu Nov 28 16:41:58 2013
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Nov 21 17:11:12 2013           ;
+; Flow Status                        ; Successful - Thu Nov 28 16:41:58 2013           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; display                                         ;
 ; Top-level Entity Name              ; display                                         ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/21/2013 17:10:03 ;
+; Start date & time ; 11/28/2013 16:40:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; display             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 29637055450148.138505020303044 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 29637055450148.138565322007104 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)         ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                             ; --            ; --          ; --             ;
@@ -92,12 +92,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 493 MB              ; 00:00:02                           ;
-; Fitter                    ; 00:00:18     ; 1.5                     ; 835 MB              ; 00:00:05                           ;
-; Assembler                 ; 00:00:16     ; 1.0                     ; 423 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:14     ; 1.0                     ; 407 MB              ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:24     ; 1.0                     ; 501 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:29     ; 1.1                     ; 835 MB              ; 00:00:06                           ;
+; Assembler                 ; 00:00:17     ; 1.0                     ; 423 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:16     ; 1.0                     ; 407 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:15     ; 1.0                     ; 383 MB              ; 00:00:01                           ;
-; Total                     ; 00:01:19     ; --                      ; --                  ; 00:00:11                           ;
+; Total                     ; 00:01:41     ; --                      ; --                  ; 00:00:12                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
