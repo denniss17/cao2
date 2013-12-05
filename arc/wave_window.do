@@ -46,6 +46,7 @@ add wave -noupdate -format Literal /processor_with_memory/cpu/ctrl/imir
 add wave -noupdate -format Literal /processor_with_memory/cpu/ctrl/psr
 add wave -noupdate -format Literal /processor_with_memory/cpu/ctrl/jmpa
 add wave -noupdate -format Literal /processor_with_memory/cpu/ctrl/cond
+add wave -noupdate -divider register
 add wave -noupdate -format Literal /processor_with_memory/cpu/dp/reg_file/CWP
 add wave -noupdate -format Literal /processor_with_memory/cpu/dp/reg_file/window_ov
 add wave -noupdate -format Literal /processor_with_memory/cpu/dp/reg_file/window_un

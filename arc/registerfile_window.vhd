@@ -59,12 +59,27 @@ BEGIN
     VARIABLE index : natural;
   BEGIN
     IF Reset='0' THEN
+      reg_file(38-24) <= (OTHERS=>'0');
       CWP <= (OTHERS=>'0');
       window_ov <= '0';
       window_un <= '0';
     ELSIF falling_edge(clk) THEN  
       reg_file(0) <= (OTHERS=>'0');  --%r0 constant zero
       index := decoder(SelC);
+      
+      IF to_integer(signed(reg_file(38-24))) < 0 THEN
+        window_un <= '1';
+      ELSE
+        window_un <= '0';
+      END IF;
+      
+      IF to_integer(unsigned(CWP)) < (2**window_depth) THEN
+        window_ov <= '0';
+      ELSE
+        window_ov <= '1';
+      END IF;
+      
+      
       IF index>0 THEN
         IF index > 31 THEN
           -- 32 till 37 is mapped to 8 till 15
@@ -102,5 +117,6 @@ BEGIN
   -- BusB <= reg_file(to_integer(unsigned(SelB)));  
  
   IR  <= reg_file(37-24);
+  CWP <= reg_file(38-24)(window_depth-1 DOWNTO 0);
     
 END ARCHITECTURE three_port;
