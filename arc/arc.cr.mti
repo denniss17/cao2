@@ -1,0 +1,10 @@
+C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/arc/microasm.vhd {1 {vcom -work work -2002 -explicit C:/Users/Dennis/Documents/_Ontwikkeling/github/cao2/arc/microasm.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Compiling entity microasm
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling architecture bhv of microasm
+
+} {} {}}
