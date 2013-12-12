@@ -87,12 +87,13 @@ BEGIN
           -- 32 till 37 is mapped to 8 till 15
           reg_file(index-24)<= BusC;
         ELSIF index > 7 THEN
-          reg_file(index + 8 + 24*to_integer(unsigned(CWP)))<= BusC;
+          reg_file(index + 8 + 16*to_integer(unsigned(CWP)))<= BusC;
         ELSE
           -- r0 t/m r7
           reg_file(index)<= BusC;
         END IF;
       END IF;
+      CWP <= reg_file(38-24)(window_depth-1 DOWNTO 0);
     END IF;
   END PROCESS registers;
   
@@ -101,7 +102,7 @@ BEGIN
       IF to_integer(unsigned(SelA)) > 31 THEN
         BusA <= reg_file(to_integer(unsigned(SelA))-24);
       ELSIF to_integer(unsigned(SelA)) > 7 THEN
-        BusA <= reg_file(to_integer(unsigned(SelA))+8+24*to_integer(unsigned(CWP)));
+        BusA <= reg_file(to_integer(unsigned(SelA))+8+16*to_integer(unsigned(CWP)));
       ELSE
         BusA <= reg_file(to_integer(unsigned(SelA)));
       END IF;
@@ -109,7 +110,7 @@ BEGIN
       IF to_integer(unsigned(SelB)) > 31 THEN
         BusB <= reg_file(to_integer(unsigned(SelB))-24);
       ELSIF to_integer(unsigned(SelB)) > 7 THEN
-        BusB <= reg_file(to_integer(unsigned(SelB))+8+24*to_integer(unsigned(CWP)));
+        BusB <= reg_file(to_integer(unsigned(SelB))+8+16*to_integer(unsigned(CWP)));
       ELSE
         BusB <= reg_file(to_integer(unsigned(SelB)));
       END IF;
@@ -119,6 +120,5 @@ BEGIN
   -- BusB <= reg_file(to_integer(unsigned(SelB)));  
  
   IR  <= reg_file(37-24);
-  CWP <= reg_file(38-24)(window_depth-1 DOWNTO 0);
     
 END ARCHITECTURE three_port;
