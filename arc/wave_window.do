@@ -50,6 +50,7 @@ add wave -noupdate -divider register
 add wave -noupdate -format Literal /processor_with_memory/cpu/dp/reg_file/CWP
 add wave -noupdate -format Literal /processor_with_memory/cpu/dp/reg_file/window_ov
 add wave -noupdate -format Literal /processor_with_memory/cpu/dp/reg_file/window_un
+add wave -noupdate -format Literal /processor_with_memory/cpu/dp/reg_file/reg_file
 TreeUpdate [SetDefaultTree]
 configure wave -namecolwidth 281
 configure wave -valuecolwidth 100

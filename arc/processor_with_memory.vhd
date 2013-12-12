@@ -24,7 +24,7 @@ LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 ENTITY processor_with_memory IS
   GENERIC (max_address_main_store : integer := 400;
-           ProgramFile : string := "program.bin");
+           ProgramFile : string := "fig4_23_subroutine.bin");
 END ENTITY processor_with_memory;
 
 ARCHITECTURE structure OF processor_with_memory IS

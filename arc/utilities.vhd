@@ -36,7 +36,7 @@ PACKAGE BODY utilities IS
     VARIABLE index : natural;
   BEGIN
     index := to_integer(unsigned(s));
-    IF index<38 THEN
+    IF index<39 THEN
       RETURN index;
     ELSE
       REPORT "decoder index out of range" SEVERITY warning;

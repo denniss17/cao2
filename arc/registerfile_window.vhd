@@ -67,13 +67,15 @@ BEGIN
       reg_file(0) <= (OTHERS=>'0');  --%r0 constant zero
       index := decoder(SelC);
       
+      -- underflow
       IF to_integer(signed(reg_file(38-24))) < 0 THEN
         window_un <= '1';
       ELSE
         window_un <= '0';
       END IF;
       
-      IF to_integer(unsigned(CWP)) < (2**window_depth) THEN
+      -- overflow
+      IF to_integer(unsigned(reg_file(38-24))) < (2**window_depth) THEN
         window_ov <= '0';
       ELSE
         window_ov <= '1';
