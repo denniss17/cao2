@@ -7,4 +7,13 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package NUMERIC_STD
 -- Compiling architecture bhv of microasm
 
+} {} {}} D:/Users/Nicker/projects/cao2/cao2/arc/microasm.vhd {1 {vcom -work work -2002 -explicit D:/Users/Nicker/projects/cao2/cao2/arc/microasm.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Compiling entity microasm
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Loading package textio
+-- Compiling architecture bhv of microasm
+
 } {} {}}
