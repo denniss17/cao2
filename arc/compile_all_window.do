@@ -1,4 +1,4 @@
-vcom utilities.vhd
+vcom utilities_window.vhd
 vcom registerfile_window.vhd
 vcom datapath_window.vhd
 vcom microstore.vhd

@@ -46,7 +46,7 @@ END ENTITY registerfile;
 
 ARCHITECTURE three_port OF registerfile IS
 
-  TYPE reg_file_type IS ARRAY (15 + 24*(2**window_depth) DOWNTO 0) OF std_logic_vector(31 DOWNTO 0);
+  TYPE reg_file_type IS ARRAY (15 + 16*(2**window_depth) DOWNTO 0) OF std_logic_vector(31 DOWNTO 0);
   SIGNAL reg_file : reg_file_type := (OTHERS=>(OTHERS=>'0'));
   SIGNAL CWP : std_logic_vector(window_depth-1 DOWNTO 0);
   ATTRIBUTE ram_block: boolean;
@@ -56,7 +56,6 @@ BEGIN
 
   -- check that register file does not have enable in signals
   registers:PROCESS(clk)
-    VARIABLE index : natural;
   BEGIN
     IF Reset='0' THEN
       reg_file(38-24) <= (OTHERS=>'0');
@@ -65,7 +64,6 @@ BEGIN
       window_un <= '0';
     ELSIF falling_edge(clk) THEN  
       reg_file(0) <= (OTHERS=>'0');  --%r0 constant zero
-      index := decoder(SelC);
       
       -- underflow
       IF to_integer(signed(reg_file(38-24))) < 0 THEN
@@ -81,43 +79,16 @@ BEGIN
         window_ov <= '1';
       END IF;
       
-      
-      IF index>0 THEN
-        IF index > 31 THEN
-          -- 32 till 37 is mapped to 8 till 15
-          reg_file(index-24)<= BusC;
-        ELSIF index > 7 THEN
-          reg_file(index + 8 + 16*to_integer(unsigned(CWP)))<= BusC;
-        ELSE
-          -- r0 t/m r7
-          reg_file(index)<= BusC;
-        END IF;
-      END IF;
+      reg_file(mapRegisterIndex(selC, CWP)) <= BusC;
       CWP <= reg_file(38-24)(window_depth-1 DOWNTO 0);
     END IF;
   END PROCESS registers;
   
-  lol:PROCESS(selA, selB)
+  input:PROCESS(selA, selB)
   BEGIN
-      IF to_integer(unsigned(SelA)) > 31 THEN
-        BusA <= reg_file(to_integer(unsigned(SelA))-24);
-      ELSIF to_integer(unsigned(SelA)) > 7 THEN
-        BusA <= reg_file(to_integer(unsigned(SelA))+8+16*to_integer(unsigned(CWP)));
-      ELSE
-        BusA <= reg_file(to_integer(unsigned(SelA)));
-      END IF;
-      
-      IF to_integer(unsigned(SelB)) > 31 THEN
-        BusB <= reg_file(to_integer(unsigned(SelB))-24);
-      ELSIF to_integer(unsigned(SelB)) > 7 THEN
-        BusB <= reg_file(to_integer(unsigned(SelB))+8+16*to_integer(unsigned(CWP)));
-      ELSE
-        BusB <= reg_file(to_integer(unsigned(SelB)));
-      END IF;
-  END PROCESS lol;
-  
-  -- BusA <= reg_file(to_integer(unsigned(SelA)));
-  -- BusB <= reg_file(to_integer(unsigned(SelB)));  
+      BusA <= reg_file(mapRegisterIndex(selA, CWP));
+      BusB <= reg_file(mapRegisterIndex(selB, CWP));
+  END PROCESS input;
  
   IR  <= reg_file(37-24);
     
